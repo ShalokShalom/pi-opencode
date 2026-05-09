@@ -123,8 +123,9 @@ const GO_OPENAI_MODELS: ModelDef[] = [
 	{ id: "kimi-k2.5", name: "Kimi K2.5", reasoning: true, input: ["text", "image"], contextWindow: 262144, maxTokens: 65536 },
 	{ id: "mimo-v2-pro", name: "MiMo V2 Pro", reasoning: true, input: ["text"], contextWindow: 128000, maxTokens: 32768 },
 	{ id: "mimo-v2-omni", name: "MiMo V2 Omni", reasoning: true, input: ["text", "image"], contextWindow: 128000, maxTokens: 32768 },
-	{ id: "qwen3.6-plus", name: "Qwen 3.6 Plus", reasoning: false, input: ["text"], contextWindow: 1000000, maxTokens: 65536 },
-	{ id: "qwen3.5-plus", name: "Qwen 3.5 Plus", reasoning: false, input: ["text"], contextWindow: 1000000, maxTokens: 65536 },
+	{ id: "qwen3.6-plus", name: "Qwen 3.6 Plus", reasoning: true, input: ["text"], contextWindow: 1000000, maxTokens: 65536 },
+	{ id: "deepseek-v4-pro", name: "Deepseek 4.0 Pro", reasoning: true, input: ["text"], contextWindow: 1000000, maxTokens: 65536 },
+    { id: "deepseek-v4-flash", name: "Deepseek 4.0 Flash", reasoning: true, input: ["text"], contextWindow: 1000000, maxTokens: 65536 },
 ];
 
 const GO_ANTHROPIC_MODELS: ModelDef[] = [
