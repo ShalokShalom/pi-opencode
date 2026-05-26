@@ -22,7 +22,7 @@ Add to your pi `settings.json` (`~/.pi/agent/settings.json`):
 ```json
 {
   "packages": [
-    "git:https://github.com/ShalokShalom/pi-opencode.git"
+    "git:https://github.com/awtotty/pi-opencode.git"
   ]
 }
 ```
@@ -30,7 +30,7 @@ Add to your pi `settings.json` (`~/.pi/agent/settings.json`):
 ### Option 2: Clone locally
 
 ```bash
-git clone https://github.com/ShalokShalom/pi-opencode.git ~/.pi/agent/extensions/pi-opencode
+git clone https://github.com/awtotty/pi-opencode.git ~/.pi/agent/extensions/pi-opencode
 ```
 
 ## Configuration
@@ -80,7 +80,7 @@ You can also select one directly via the full path:
 ```
 {
   "packages": [
-    "git:https://github.com/ShalokShalom/pi-opencode.git"
+    "git:https://github.com/awtotty/pi-opencode.git"
   ],
   "defaultProvider": "opencode-go",
   "defaultModel": "deepseek-v4-flash"
