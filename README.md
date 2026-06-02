@@ -4,14 +4,13 @@ Extension for the [pi](https://github.com/mariozechner/pi-coding-agent) coding a
 
 ## Features
 
-- **40+ models**: GPT, Claude, Gemini, GLM, Kimi, Qwen, MiniMax, and more:
-  (**Complete List**)[https://models.dev/?sort=provider&order=asc&search=OpenCode] (raise an issue, if you find a model in this list, thats not available with this extension)
+- [**Dozens of open and closed models**](https://models.dev/?sort=provider&order=asc&search=OpenCode)  (Raise an issue, if you find a model in this list, thats not available with this extension)
 - **opencode-go**: Subscription service (https://opencode.ai/zen/go)
 - **opencode-zen**: Pay-as-you-go (https://opencode.ai/zen)
 
 ## Prerequisites
 
-- Install [pi](https://github.com/earendil-works/pi) and a npm implementation (npm, yarn, pnpm)
+- Install [pi](https://github.com/earendil-works/pi) and npm.
 - Create an OpenCode account: https://opencode.ai/auth 
 - Pay for the service (Go is strongly recommended), and [copy the API key.](https://opencode.ai/workspace/wrk_01KR5R14VMRPHGAACY61PYWNM6/keys) 
 
@@ -74,13 +73,11 @@ Type `/model` to select a model.
 You can also select one directly via the full path:
 
 ```bash
-/model opencode-zen/gpt-5.1
 /model opencode-go-anthropic/minimax-m3
+/model opencode-zen/gpt-5.5
 ```
 
-### Note about MiniMax
-
-MiniMax uses the Anthropic Messages API.  
+### Available Provider
 
 | Provider | API | Endpoint |
 |----------|-----|----------|
@@ -88,6 +85,9 @@ MiniMax uses the Anthropic Messages API.
 | opencode-zen | OpenAI Chat Completions | https://opencode.ai/zen/v1/chat/completions |
 | opencode-go-anthropic | Anthropic Messages | https://opencode.ai/zen/go/v1/messages |
 | opencode-zen-anthropic | Anthropic Messages | https://opencode.ai/zen/v1/messages |
+
+The Anthropic Messages API provides you with Claude and MiniMax models. 
+All the other models come from the OpenAI interface. 
 
 ## Development
 

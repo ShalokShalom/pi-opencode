@@ -97,7 +97,7 @@ const ZEN_ANTHROPIC_MODELS: ModelDefinition[] = [
   { id: "claude-3-5-haiku", name: "Claude Haiku 3.5", reasoning: true, input: ["text", "image"], contextWindow: 200000, maxTokens: 8192 },
 ];
 
-// OpenAI Chat Completions compatible models (GPT / Gemini / Qwen / GLM / Kimi / etc.)
+// OpenAI "Chat Completions" compatible models (GPT / Gemini / Qwen / GLM / Kimi / etc.)
 const ZEN_OPENAI_MODELS: ModelDefinition[] = [
 	// GPT
 	{ id: "gpt-5.5", name: "GPT 5.5", reasoning: true, input: ["text"], contextWindow: 1000000, maxTokens: 32000 },
@@ -145,7 +145,7 @@ export default function (pi: ExtensionAPI) {
 		models: GO_OPENAI_MODELS.map(toOpenAIModel),
 	});
 
-	// Go — Anthropic Messages (MiniMax)
+	// Go — Anthropic Messages (Claude + MiniMax)
 	pi.registerProvider("opencode-go-anthropic", {
 		baseUrl: "https://opencode.ai/zen/go",
 		apiKey: "OPENCODE_API_KEY",
@@ -161,7 +161,7 @@ export default function (pi: ExtensionAPI) {
 		models: ZEN_OPENAI_MODELS.map(toOpenAIModel),
 	});
 
-	// Zen — Anthropic Messages (Claude family + MiniMax)
+	// Zen — Anthropic Messages (Claude + MiniMax)
 	pi.registerProvider("opencode-zen-anthropic", {
 		baseUrl: "https://opencode.ai/zen",
 		apiKey: "OPENCODE_API_KEY",
