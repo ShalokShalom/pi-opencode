@@ -1,12 +1,14 @@
-# opencode-pi
+# pi-opencode
 
 Extension for the [pi](https://github.com/mariozechner/pi-coding-agent) coding agent, to add OpenCode as a provider. 🙂
 
 ## Features
 
-- [**Dozens of open and closed models**](https://models.dev/?sort=provider&order=asc&search=OpenCode)  (Raise an issue, if you find a model in this list, thats not available with this extension)
-- **opencode-go**: Subscription service (https://opencode.ai/zen/go)
-- **opencode-zen**: Pay-as-you-go (https://opencode.ai/zen)
+- [**Dozens of open and closed models**](https://models.dev/?sort=provider&order=asc&search=OpenCode)  
+  (Please raise an issue, if you find a model in this list, thats not available with this extension)
+
+- **opencode-go**: [Subscription service](https://opencode.ai/go) 
+- **opencode-zen**: [Pay-as-you-go](https://opencode.ai/zen)
 
 ## Prerequisites
 
@@ -28,10 +30,10 @@ Add this to your pi `settings.json` (`~/.pi/agent/settings.json`):
 
 ### Recommended Configuration
 
-This is currently the recommended setup, so long as M3 is free on the Zen tier, and generally the strongest model on the subscription model. 
+This is currently the recommended setup, so long as M3 is free on the Zen tier, and generally the strongest model on the subscription model.  
 (The free version is limited to a 256k context window, while the paid Go subscription is able to utilize the full 1 million token.)
 
-```
+```json
 {
   "packages": [
     "git:https://github.com/ShalokShalom/pi-opencode.git"
@@ -45,15 +47,13 @@ This is currently the recommended setup, so long as M3 is free on the Zen tier, 
 
 Add this line to your shell configuration: 
 
-Bash, Zsh, etc
-
 ```bash
+# Bash, Zsh, etc
 export OPENCODE_API_KEY="your-api-key-here"
 ```
 
-Fish
-
 ```fish
+# Fish
 set -Ux OPENCODE_API_KEY "your-api-key-here"
 ```
 
@@ -86,8 +86,8 @@ You can also select one directly via the full path:
 | opencode-go-anthropic | Anthropic Messages | https://opencode.ai/zen/go/v1/messages |
 | opencode-zen-anthropic | Anthropic Messages | https://opencode.ai/zen/v1/messages |
 
-The Anthropic Messages API provides you with Claude and MiniMax models. 
-All the other models come from the OpenAI interface. 
+The Anthropic Messages API provides you with Claude and MiniMax models.  
+All the other models come from the OpenAI API.
 
 ## Development
 
@@ -104,19 +104,23 @@ pi -e ./src/index.ts
 
 ### "No API key" error
 
+Try:
+
 ```bash
 echo $OPENCODE_API_KEY
 ```
 
-If empty, set it as shown in [step 2](#2-set-the-environment-variable)
+This shows you your API key, if you had set it.  
+If you see no such key, you have to first set it as shown [here.](#2-set-the-environment-variable).
 
-### Extension not loading
+### Extension is not loading successfully
 
 Run `/reload` after changes.
 
-### Model not found
+### Model is not found
 
 Verify that the model name is correct; [they are case-sensitive.](https://models.dev/?sort=provider&order=asc&search=OpenCode)
+Otherwise, [rise an issue.](https://github.com/shalokshalom/pi-opencode/issues/new)
 
 ## License
 
