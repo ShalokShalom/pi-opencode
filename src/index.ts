@@ -140,7 +140,7 @@ export default function (pi: ExtensionAPI) {
   // Go — OpenAI Chat Completions
 	pi.registerProvider("opencode-go", {
 		baseUrl: "https://opencode.ai/zen/go/v1",
-		apiKey: "OPENCODE_API_KEY",
+		apiKey: "$OPENCODE_API_KEY",
 		api: "openai-completions",
 		models: GO_OPENAI_MODELS.map(toOpenAIModel),
 	});
@@ -148,7 +148,7 @@ export default function (pi: ExtensionAPI) {
 	// Go — Anthropic Messages (Claude + MiniMax)
 	pi.registerProvider("opencode-go-anthropic", {
 		baseUrl: "https://opencode.ai/zen/go",
-		apiKey: "OPENCODE_API_KEY",
+		apiKey: "$OPENCODE_API_KEY",
 		api: "anthropic-messages",
 		models: GO_ANTHROPIC_MODELS.map(toAnthropicModel),
 	});
@@ -156,7 +156,7 @@ export default function (pi: ExtensionAPI) {
   // Zen — OpenAI Chat Completions
 	pi.registerProvider("opencode-zen", {
 		baseUrl: "https://opencode.ai/zen/v1",
-		apiKey: "OPENCODE_API_KEY",
+		apiKey: "$OPENCODE_API_KEY",
 		api: "openai-completions",
 		models: ZEN_OPENAI_MODELS.map(toOpenAIModel),
 	});
@@ -164,7 +164,7 @@ export default function (pi: ExtensionAPI) {
 	// Zen — Anthropic Messages (Claude + MiniMax)
 	pi.registerProvider("opencode-zen-anthropic", {
 		baseUrl: "https://opencode.ai/zen",
-		apiKey: "OPENCODE_API_KEY",
+		apiKey: "$OPENCODE_API_KEY",
 		api: "anthropic-messages",
 		models: ZEN_ANTHROPIC_MODELS.map(toAnthropicModel),
 	});

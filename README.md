@@ -43,7 +43,7 @@ This is currently the recommended setup, so long as M3 is free on the Zen tier, 
 }
 ```
 
-## Configuration
+## Set the API key
 
 Add this line to your shell configuration: 
 
@@ -59,7 +59,7 @@ set -Ux OPENCODE_API_KEY "your-api-key-here"
 
 (`~/.bashrc`, `~/.zshrc`, `~/.config/fish/config.fish`)
 
-### 3. Open pi
+### Open pi
 
 **First**, open a new shell to load the config (`exec bash`, `exec zsh`, `exec fish`).  
 **Then** open `pi`.
@@ -111,7 +111,7 @@ echo $OPENCODE_API_KEY
 ```
 
 This shows you your API key, if you had set it.  
-If you see no such key, you have to first set it as shown [here.](#2-set-the-environment-variable).
+If you see no such key, you have to first set it as shown [here.](#set-the-API-key).
 
 ### Extension is not loading successfully
 
